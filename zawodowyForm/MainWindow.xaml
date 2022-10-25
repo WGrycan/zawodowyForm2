@@ -1,0 +1,54 @@
+﻿<Window x:Class="deklaracja.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:deklaracja"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="670" Width="1070">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="91*"/>
+            <RowDefinition Height="127*"/>
+        </Grid.RowDefinitions>
+        <GroupBox Header="Dane osobowe ucznia" Margin="49,56,535,91">
+            <Canvas Margin="0,-4,20,4">
+                <TextBlock >Nazwisko:</TextBlock>
+                <TextBox Name="Nazwisko" Width="285" Canvas.Left="147" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <TextBlock HorizontalAlignment="Center" Canvas.Top="25" VerticalAlignment="Top">Imię (imiona):</TextBlock>
+                <TextBox Name="Imie" Width="285" TextChanged="Imie_TextChanged" Canvas.Left="147" Canvas.Top="25" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <TextBlock Canvas.Top="53" HorizontalAlignment="Center" VerticalAlignment="Top" Text="Data i miejsce urodzenia:"/>
+                <TextBox x:Name="Imie_Copy" Width="195" TextChanged="Imie_TextChanged" Canvas.Left="237" Canvas.Top="53" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <TextBox x:Name="Imie_Copy1" Width="72" TextChanged="Imie_TextChanged" Canvas.Left="147" Canvas.Top="53" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <TextBox x:Name="Imie_Copy2" Width="85" TextChanged="Imie_TextChanged" Canvas.Left="147" Canvas.Top="79" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <TextBlock Canvas.Top="80" HorizontalAlignment="Center" VerticalAlignment="Top"><Run Language="pl-pl" Text="Numer PESEL"/></TextBlock>
+            </Canvas>
+
+
+        </GroupBox>
+        <TextBlock Name="Block"  HorizontalAlignment="Left" Margin="680,83,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="199" Width="282" Grid.RowSpan="2"/>
+        <Button Content="Zatwierdź" HorizontalAlignment="Left" Margin="742,210,0,0" VerticalAlignment="Top" Height="51" Width="158" Click="Button_Click" Grid.Row="1"/>
+        <GroupBox Header="Adres korespondencyjny" Margin="49,201,535,327" Grid.RowSpan="2">
+            <Canvas Margin="0,-4,20,4">
+                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Width="112" ><Run Language="pl-pl" Text="miejscowość"/><Run Text=":"/></TextBlock>
+                <TextBox x:Name="Nazwisko1" Width="285" Canvas.Left="146" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <TextBlock HorizontalAlignment="Left" Canvas.Top="25" VerticalAlignment="Center" Width="121"><Run Language="pl-pl" Text="ulica i numer domu"/><Run Text=":"/></TextBlock>
+                <TextBox x:Name="Imie1" Width="285" TextChanged="Imie_TextChanged" Canvas.Left="146" Canvas.Top="25" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <TextBlock Canvas.Top="53" HorizontalAlignment="Center" VerticalAlignment="Top"><Run Language="pl-pl" Text="kod pocztowy i poczta"/></TextBlock>
+                <TextBox x:Name="Imie_Copy3" Width="195" TextChanged="Imie_TextChanged" Canvas.Left="236" Canvas.Top="53" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <TextBox x:Name="Imie_Copy4" Width="72" TextChanged="Imie_TextChanged" Canvas.Left="146" Canvas.Top="53" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <TextBox x:Name="Imie_Copy5" Width="85" TextChanged="Imie_TextChanged" Canvas.Left="146" Canvas.Top="79" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <TextBlock Canvas.Top="80" HorizontalAlignment="Center" VerticalAlignment="Top"><Run Text="nr "/><Run Language="pl-pl" Text="te"/><Run Text="lefonu z kierunkowym "/></TextBlock>
+                <TextBlock Canvas.Top="79" Width="29" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="245"><Run Language="pl-pl" Text="mail"/><Run Text=":"/></TextBlock>
+                <TextBox x:Name="Imie_Copy6" Width="152" TextChanged="Imie_TextChanged" Canvas.Left="279" Canvas.Top="80" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            </Canvas>
+
+
+        </GroupBox>
+        <TextBox HorizontalAlignment="Left" Margin="70,91,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Deklaruję przystąpienie do egzaminu potwierdzającego kwalifikacje w zawodzie&#xD;&#xA;przeprowadzanego w terminie" VerticalAlignment="Top" Width="562" TextChanged="TextBox_TextChanged"/>
+        <RadioButton Content="technik informatyk" HorizontalAlignment="Left" Margin="155,199,0,0" Grid.Row="1" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
+        <RadioButton Content="technik programista" HorizontalAlignment="Left" Margin="342,202,0,0" Grid.Row="1" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
+
+
+    </Grid>
+</Window>
